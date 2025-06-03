@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS Calculator App</title>
+        <link rel="stylesheet" type="text" href="style.css">
+        <script src="script.js" defer></script> 
+    </head>
+    <body>
+        <!--(Week 4) Section 1: The Calculator App, Lesson 1: HTML Layout -->
+        <div class="calculator">
+            <table border="1">
+                <tr>
+                    <td colspan="4">
+                        <input type="text" id="inputBox" value="0"> 
+                    </td>
+                </tr>
+                <tr>
+                    <td onclick="digitBtnPressed(7)">7</td>
+                    <td onclick="digitBtnPressed(8)">8</td>
+                    <td onclick="digitBtnPressed(9)">9</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td onclick="digitBtnPressed(4)">4</td>
+                    <td onclick="digitBtnPressed(5)">5</td>
+                    <td onclick="digitBtnPressed(6)">6</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td onclick="digitBtnPressed(1)">1</td>
+                    <td onclick="digitBtnPressed(2)">2</td>
+                    <td onclick="digitBtnPressed(3)">3</td>
+                    <td>+</td>
+                </tr>
+                <tr>
+                    <td colspan="2" onclick="digitBtnPressed(0)">0</td>
+                    
+                    <td onclick="btnACPressed()">AC</td>
+                    <td>÷</td>
+                </tr>
+                <tr>
+                    <td colspan="4">=</td>
+                </tr>
+            </table>
+        </div>
+        
+    </body>
+</html>
