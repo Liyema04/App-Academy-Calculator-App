@@ -4,44 +4,44 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>JS Calculator App</title>
-        <link rel="stylesheet" type="text" href="style.css">
+        <link rel="stylesheet" href="style.css">
         <script src="script.js" defer></script> 
     </head>
     <body>
         <!--(Week 4) Section 1: The Calculator App, Lesson 1: HTML Layout -->
         <div class="calculator">
-            <table border="1">
+            <table border="4">
                 <tr>
                     <td colspan="4">
                         <input type="text" id="inputBox" value="0"> 
                     </td>
                 </tr>
                 <tr>
-                    <td onclick="digitBtnPressed(7)">7</td>
-                    <td onclick="digitBtnPressed(8)">8</td>
-                    <td onclick="digitBtnPressed(9)">9</td>
-                    <td>x</td>
+                    <td class="digitButton" onclick="digitBtnPressed(7)">7</td>
+                    <td class="digitButton" onclick="digitBtnPressed(8)">8</td>
+                    <td class="digitButton" onclick="digitBtnPressed(9)">9</td>
+                    <td class="operatorButton" onclick="operatorBtnPressed('*')">x</td> <!--Operator Event Handler-->
                 </tr>
                 <tr>
-                    <td onclick="digitBtnPressed(4)">4</td>
-                    <td onclick="digitBtnPressed(5)">5</td>
-                    <td onclick="digitBtnPressed(6)">6</td>
-                    <td>-</td>
+                    <td class="digitButton" onclick="digitBtnPressed(4)">4</td>
+                    <td class="digitButton" onclick="digitBtnPressed(5)">5</td>
+                    <td class="digitButton" onclick="digitBtnPressed(6)">6</td>
+                    <td class="operatorButton" onclick="operatorBtnPressed('-')">-</td> <!--Operator Event Handler-->
                 </tr>
                 <tr>
-                    <td onclick="digitBtnPressed(1)">1</td>
-                    <td onclick="digitBtnPressed(2)">2</td>
-                    <td onclick="digitBtnPressed(3)">3</td>
-                    <td>+</td>
+                    <td class="digitButton" onclick="digitBtnPressed(1)">1</td>
+                    <td class="digitButton" onclick="digitBtnPressed(2)">2</td>
+                    <td class="digitButton" onclick="digitBtnPressed(3)">3</td>
+                    <td class="operatorButton" onclick="operatorBtnPressed('+')">+</td> <!--Operator Event Handler-->
                 </tr>
                 <tr>
-                    <td colspan="2" onclick="digitBtnPressed(0)">0</td>
+                    <td class="digitButton" colspan="2"  onclick="digitBtnPressed(0)">0</td>
                     
-                    <td onclick="btnACPressed()">AC</td>
-                    <td>÷</td>
+                    <td class="ACButton" onclick="btnACPressed()">AC</td>
+                    <td class="operatorButton" onclick="operatorBtnPressed('/')">÷</td> <!--Operator Event Handler-->
                 </tr>
                 <tr>
-                    <td colspan="4">=</td>
+                    <td class="equalsButton" colspan="4" onclick="equalsBtnPressed()">=</td>
                 </tr>
             </table>
         </div>

@@ -1,0 +1,42 @@
+/* (Week 4) Section 1: The Calculator App, Lesson 7: Styling */
+
+table {
+    color: #fff;
+    text-align: center;
+    border-radius: 18px; /*mod*/
+    font: normal 3em Arial, Helvetica, sans-serif;
+    gap: 6px; /*mod*/
+}
+
+tr {
+    height: 16.02vh;
+    background-color: #4e494d;
+    border-radius: 18px; /*mod*/
+}
+
+td {
+    width: 25vw;
+    border: 1px solid #fff;
+    border-radius: 18px; /*mod*/
+}
+
+#inputBox {
+    background-color: #4e494d;
+    text-align: right;
+    width: 98%; /*mod*/
+    font-size: 2em;
+    color: #fff;
+    border: 0px;
+}
+
+.digitButton {
+    background-color: #807e80;
+}
+
+.operatorButton {
+    background-color: #ff9e06;
+}
+
+.ACButton {
+    background-color: #656165;
+}
