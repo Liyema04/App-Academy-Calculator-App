@@ -1,0 +1,102 @@
+body {
+    background: #181818;
+    font-family: 'SamsungOne', Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.calculator {
+    background: #23272e;
+    border-radius: 32px;
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+    padding: 32px 20px;
+    max-width: 380px;
+    margin: auto;
+}
+
+table {
+    color: #fff;
+    text-align: center;
+    border-radius: 24px;
+    font: normal 2.2em 'SamsungOne', Arial, Helvetica, sans-serif;
+    gap: 8px;
+    background: transparent;
+    width: 100%;
+}
+
+tr {
+    height: 60px;
+    background: none;
+}
+
+td {
+    width: 25%;
+    border: none;
+    border-radius: 18px;
+    padding: 8px;
+    transition: background 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+#inputBox {
+    background: #23272e;
+    text-align: right;
+    width: 98%;
+    font-size: 2.2em;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    padding: 16px 8px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+.digitButton {
+    background: #31343b;
+    color: #fff;
+}
+
+.digitButton:active {
+    background: #44474f;
+}
+
+.operatorButton {
+    background: #ffb800;
+    color: #23272e;
+    font-weight: bold;
+}
+
+.operatorButton:active {
+    background: #ffd966;
+}
+
+.ACButton {
+    background: #e24444;
+    color: #fff;
+}
+
+.ACButton:active {
+    background: #ff6f6f;
+}
+
+.equalsButton {
+    background: #00bfae;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 18px;
+    font-size: 1.1em;
+}
+
+.equalsButton:active {
+    background: #1de9b6;
+}
+
+/* Optional: Add SamsungOne font if available */
+@font-face {
+    font-family: 'SamsungOne';
+    src: local('SamsungOne'), url('https://fonts.cdnfonts.com/s/16124/SamsungOne-400.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
