@@ -317,40 +317,40 @@ Changes in HTML :
 
 ```html
 <div class="calculator">
-            <table border="4">
-                <tr>
-                    <td colspan="4">
+    <table border="4">
+        <tr>
+            <td colspan="4">
                         <input type="text" id="inputBox" value="0"> 
-                    </td>
-                </tr>
-                <tr>
-                    <td class="digitButton" onclick="digitBtnPressed(7)">7</td>
-                    <td class="digitButton" onclick="digitBtnPressed(8)">8</td>
-                    <td class="digitButton" onclick="digitBtnPressed(9)">9</td>
-                    <td class="operatorButton" onclick="operatorBtnPressed('*')">x</td> <!--Operator Event Handler-->
-                </tr>
-                <tr>
-                    <td class="digitButton" onclick="digitBtnPressed(4)">4</td>
-                    <td class="digitButton" onclick="digitBtnPressed(5)">5</td>
-                    <td class="digitButton" onclick="digitBtnPressed(6)">6</td>
-                    <td class="operatorButton" onclick="operatorBtnPressed('-')">-</td> <!--Operator Event Handler-->
-                </tr>
-                <tr>
-                    <td class="digitButton" onclick="digitBtnPressed(1)">1</td>
-                    <td class="digitButton" onclick="digitBtnPressed(2)">2</td>
-                    <td class="digitButton" onclick="digitBtnPressed(3)">3</td>
-                    <td class="operatorButton" onclick="operatorBtnPressed('+')">+</td> <!--Operator Event Handler-->
-                </tr>
-                <tr>
-                    <td class="digitButton" colspan="2"  onclick="digitBtnPressed(0)">0</td>
-                    
-                    <td class="ACButton" onclick="btnACPressed()">AC</td>
-                    <td class="operatorButton" onclick="operatorBtnPressed('/')">÷</td> <!--Operator Event Handler-->
-                </tr>
-                <tr>
-                    <td class="equalsButton" colspan="4" onclick="equalsBtnPressed()">=</td>
-                </tr>
-            </table>
+            </td>
+        </tr>
+        <tr>
+            <td class="digitButton" onclick="digitBtnPressed(7)">7</td>
+            <td class="digitButton" onclick="digitBtnPressed(8)">8</td>
+            <td class="digitButton" onclick="digitBtnPressed(9)">9</td>
+            <td class="operatorButton" onclick="operatorBtnPressed('*')">x</td> <!--Operator Event Handler-->
+        </tr>
+        <tr>
+            <td class="digitButton" onclick="digitBtnPressed(4)">4</td>
+            <td class="digitButton" onclick="digitBtnPressed(5)">5</td>
+            <td class="digitButton" onclick="digitBtnPressed(6)">6</td>
+            <td class="operatorButton" onclick="operatorBtnPressed('-')">-</td> <!--Operator Event Handler-->
+        </tr>
+        <tr>
+            <td class="digitButton" onclick="digitBtnPressed(1)">1</td>
+            <td class="digitButton" onclick="digitBtnPressed(2)">2</td>
+            <td class="digitButton" onclick="digitBtnPressed(3)">3</td>
+            <td class="operatorButton" onclick="operatorBtnPressed('+')">+</td> <!--Operator Event Handler-->
+        </tr>
+        <tr>
+            <td class="digitButton" colspan="2"  onclick="digitBtnPressed(0)">0</td>
+                   
+            <td class="ACButton" onclick="btnACPressed()">AC</td>
+            <td class="operatorButton" onclick="operatorBtnPressed('/')">÷</td> <!--Operator Event Handler-->
+        </tr>
+        <tr>
+            <td class="equalsButton" colspan="4" onclick="equalsBtnPressed()">=</td>
+        </tr>
+    </table>
 </div>
 ```
 
