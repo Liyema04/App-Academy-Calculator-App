@@ -1,3 +1,17 @@
+// Page window : Open Animation
+window.addEventListener('DOMContentLoaded', function() {
+    // Start with back face visible
+    document.getElementById("calculator").style.transform = "rotateY(0deg)";
+    // Animate flip from back (welcome text) to front (calculator)
+    anime({
+        targets: '#calcFlipCard',
+        rotateY: [0, 180],
+        duration: 1200,
+        easing: 'easeInOutSine'
+    });
+});
+
+// Calculator 
 let newLine = true; // Boolean variable. Determines if the next thing the user types should be on a new line
 let value1;
 let currentOperator;
@@ -68,3 +82,13 @@ function equalsBtnPressed() {
     value1 = 0;
     newLine = true;
 }
+// Try it out -> Button
+document.getElementById('tryItBtn').addEventListener('click', function() {
+    // Flip back to welcome text
+    anime({
+        targets: '#calcFlipCard',
+        rotateY: [180, 0],
+        duration: 1200,
+        easing: 'easeInOutSine'
+    });
+});
