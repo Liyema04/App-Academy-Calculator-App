@@ -1,7 +1,7 @@
 // Page window : Open Animation
 window.addEventListener('DOMContentLoaded', function() {
     // Start with back face visible
-    document.getElementById("calculator").style.transform = "rotateY(0deg)";
+    document.getElementById("calcFlipCard").style.transform = "rotateY(0deg)";
     // Animate flip from back (welcome text) to front (calculator)
     anime({
         targets: '#calcFlipCard',
@@ -9,12 +9,20 @@ window.addEventListener('DOMContentLoaded', function() {
         duration: 1200,
         easing: 'easeInOutSine'
     });
+
+    // Event listeners after DOM is loaded
+    document.getElementById('historyBtn').addEventListener('click', showHistory);
+    document.getElementById('closeHistoryBtn').addEventListener('click', hideHistory);
+    document.getElementById('historyPopup').addEventListener('click', function(e) {
+        if (e.target === this) hideHistory();
+    });
 });
 
 // Calculator 
 let newLine = true; // Boolean variable. Determines if the next thing the user types should be on a new line
 let value1;
 let currentOperator;
+let history = [];
 
 // Event handler for Decimal button is 
 function decimalBtnPressed() {
@@ -58,6 +66,26 @@ function operatorBtnPressed(operator) {
     newLine = true;
 }
 
+// Event handler for history button
+function showHistory() {
+    const popup = document.getElementById("historyPopup");
+    const list = document.getElementById("historyList");
+    list.innerHTML= '';
+    if (history.length === 0) {
+        list.innerHTML = '<li>No history yet.</li>';
+    } else {
+        history.slice().reverse().forEach(item => {
+            const li = document.createElement('li');
+            li.textContent = item;
+            list.appendChild(li);
+        });
+    }
+    popup.style.display = 'flex';
+}
+
+function hideHistory() {
+    document.getElementById("historyPopup").style.display = 'none';
+}
 
 // Event handler for Equals-To button
 function equalsBtnPressed() {
@@ -78,7 +106,12 @@ function equalsBtnPressed() {
             finalTotal = value1 * value2;
             break;        
     }
-    document.getElementById("inputBox").value = Number.isFinite(finalTotal) ? finalTotal : "Error"; // Error instance
+    let display = Number.isFinite(finalTotal) ? finalTotal : "Error"; // Error instance
+    document.getElementById("inputBox").value = display;
+    // Save to history
+    if (currentOperator && !isNaN(value1) && !isNaN(value2)) {
+        history.push(`${value1} ${currentOperator} ${value2} = ${display}`)
+    } 
     value1 = 0;
     newLine = true;
 }

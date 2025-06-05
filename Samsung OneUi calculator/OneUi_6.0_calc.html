@@ -27,37 +27,49 @@
                         <table border="4">
                             <tr>
                                 <td colspan="4">
-                                    <input type="text" id="inputBox" value="0"> 
+                                    <input type="text" id="inputBox" value="0">
+                                    <td colspan="2"></td>
+                                    <td class="historyButton" id="historyBtn">
+                                    <img src="Tabs/Icons (.svg)/history-svgrepo-com.svg" alt="History" class="history-svg">
+                                </td> 
                                 </td>
                             </tr>
                             <tr>
                                 <td class="digitButton" onclick="digitBtnPressed(7)">7</td>
                                 <td class="digitButton" onclick="digitBtnPressed(8)">8</td>
                                 <td class="digitButton" onclick="digitBtnPressed(9)">9</td>
-                                <td class="operatorButton" onclick="operatorBtnPressed('*')">x</td> <!--Operator Event Handler-->
+                                <td class="operatorButton" colspan="4" onclick="operatorBtnPressed('*')">x</td> <!--Operator Event Handler-->
                             </tr>
                             <tr>
                                 <td class="digitButton" onclick="digitBtnPressed(4)">4</td>
                                 <td class="digitButton" onclick="digitBtnPressed(5)">5</td>
                                 <td class="digitButton" onclick="digitBtnPressed(6)">6</td>
-                                <td class="operatorButton" onclick="operatorBtnPressed('-')">-</td> <!--Operator Event Handler-->
+                                <td class="operatorButton" colspan="4" onclick="operatorBtnPressed('-')">-</td> <!--Operator Event Handler-->
                             </tr>
                             <tr>
                                 <td class="digitButton" onclick="digitBtnPressed(1)">1</td>
                                 <td class="digitButton" onclick="digitBtnPressed(2)">2</td>
                                 <td class="digitButton" onclick="digitBtnPressed(3)">3</td>
-                                <td class="operatorButton" onclick="operatorBtnPressed('+')">+</td> <!--Operator Event Handler-->
+                                <td class="operatorButton" colspan="4" onclick="operatorBtnPressed('+')">+</td> <!--Operator Event Handler-->
                             </tr>
                             <tr>
                                 <td class="digitButton" colspan="2"  onclick="digitBtnPressed(0)">0</td>
                                 <td class="digitButton" onclick="decimalBtnPressed()">.</td> <!--Decimal Event Handler-->
                                 <td class="ACButton" onclick="btnACPressed()">AC</td>
-                                <td class="operatorButton" onclick="operatorBtnPressed('/')">÷</td> <!--Operator Event Handler-->
+                                <td class="operatorButton" colspan="4" onclick="operatorBtnPressed('/')">÷</td> <!--Operator Event Handler-->
                             </tr>
                             <tr>
-                                <td class="equalsButton" colspan="4" onclick="equalsBtnPressed()">=</td>
+                                <td class="equalsButton" colspan="7" onclick="equalsBtnPressed()">=</td>
                             </tr>
                         </table>
+                        <!-- History Popup -->
+                        <div id="historyPopup" class="history-popup">
+                            <div class="history-popup-content">
+                                <span class="close-history" id="closeHistoryBtn">&times;</span>
+                                <h2>Calculation History</h2>
+                                <ul id="historyList"></ul>
+                            </div>
+                        </div>    
                     </div> 
                 </div>           
             </div>    
