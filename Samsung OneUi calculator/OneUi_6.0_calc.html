@@ -28,12 +28,30 @@
                             <tr>
                                 <td colspan="4">
                                     <input type="text" id="inputBox" value="0">
-                                    <td colspan="2"></td>
-                                    <td class="historyButton" id="historyBtn">
+                                </td>
+                                <td colspan="2"></td>
+                                <td class="historyButton" id="historyBtn">
                                     <img src="Tabs/Icons (.svg)/history-svgrepo-com.svg" alt="History" class="history-svg">
-                                </td> 
+                                </td>
+                                <!-- Scientific mode -->
+                                <td class="sciButton" id="sciBtn">
+                                    <img src="Tabs/Icons (.svg)/test-tube-minimalistic-svgrepo-com.svg" alt="Scientific" class="sci-svg" id="testTubeIcon">
+                                    <img src="Tabs/Icons (.svg)/calculator-minimalistic-svgrepo-com.svg" alt="Calculator" class="sci-svg" id="calcIcon" style="display: none;">
                                 </td>
                             </tr>
+                            <!-- Scientific buttons visible when mode[enabled]  -->
+                            <tbody id="sciFuncRows" style="display: none;">
+                                <tr>
+                                    <td class="sciFuncBtn" colspan="2"  onclick="sciFuncPressed('sin')">sin</td>
+                                    <td class="sciFuncBtn" colspan="2" onclick="sciFuncPressed('cos')">cos</td>
+                                    <td class="sciFuncBtn" colspan="3" onclick="sciFuncPressed('tan')">tan</td>
+                                </tr>
+                                <tr>
+                                    <td class="sciFuncBtn" colspan="2" onclick="sciFuncPressed('sqrt')">√</td>
+                                    <td class="sciFuncBtn" colspan="2" onclick="sciFuncPressed('pow2')">x²</td>
+                                    <td class="sciFuncBtn" colspan="3" onclick="sciFuncPressed('pi')">π</td>
+                                </tr>
+                            </tbody>
                             <tr>
                                 <td class="digitButton" onclick="digitBtnPressed(7)">7</td>
                                 <td class="digitButton" onclick="digitBtnPressed(8)">8</td>
@@ -69,7 +87,7 @@
                                 <h2>Calculation History</h2>
                                 <ul id="historyList"></ul>
                             </div>
-                        </div>    
+                        </div>
                     </div> 
                 </div>           
             </div>    

@@ -226,3 +226,50 @@ td {
     border-bottom: 1px solid #444;
     font-size: 1.1em;
 }
+
+/* Scientific buttons panel */
+.sciButton {
+    background: #23272e;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    height: 60px;
+    padding: 0;
+    margin-left: 8px;
+}
+
+.sciButton:active {
+    background: #31343b;
+}
+
+.sci-svg {
+    width: 32px;
+    height: 32px;
+    filter: invert(54%) sepia(91%) saturate(749%) hue-rotate(130deg) brightness(95%) contrast(92%);
+    position: absolute;
+    transition: opacity 0.3s ease;
+}
+.sci-panel {
+    display: flex;
+    justify-content: center;
+    margin: 16px 0;
+    gap: 8px;
+}
+
+.sciFuncBtn {
+    background: #31343b;
+    color: #fff;
+    border: none;
+    border-radius: 18px;
+    padding: 12px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.sciFuncBtn:active {
+    background: #44474f;
+}

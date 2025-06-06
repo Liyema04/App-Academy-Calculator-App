@@ -87,6 +87,52 @@ function hideHistory() {
     document.getElementById("historyPopup").style.display = 'none';
 }
 
+// Show/hide scientific panel and toggle icons
+document.getElementById('sciBtn').addEventListener('click', function() {
+    const sciFuncRows = document.getElementById("sciFuncRows");
+    const testTubeIcon = document.getElementById("testTubeIcon");
+    const calcIcon = document.getElementById("calcIcon");
+
+    if (sciFuncRows.style.display === 'none' || sciFuncRows.style.display === '') {
+        sciFuncRows.style.display = 'table-row-group';
+        testTubeIcon.style.display = 'none';
+        calcIcon.style.display = 'block';
+    } else {
+        sciFuncRows.style.display = 'none';
+        testTubeIcon.style.display = 'block';
+        calcIcon.style.display = 'none';
+    }
+});
+
+// Handle scientific function button press
+function sciFuncPressed(func) {
+    let inputBox = document.getElementById("inputBox");
+    let value = parseFloat(inputBox.value);
+    let result;
+    switch(func) {
+        case 'sin': 
+            result = Math.sin(value);
+            break; 
+        case 'cos': 
+            result = Math.cos(value);
+            break;
+        case 'tan': 
+            result = Math.tann(value);
+            break;        
+        case 'sqrt': 
+            result = Math.sqrt(value);
+            break;
+        case 'pow2': 
+            result = Math.pow(value, 2);
+            break;
+        case 'pi': 
+            result = Math.PI;
+            break;        
+        }
+        inputBox.value = result;
+        newLine = true;
+}
+
 // Event handler for Equals-To button
 function equalsBtnPressed() {
     let value2 = parseFloat(document.getElementById("inputBox").value); // changed to float
@@ -115,6 +161,7 @@ function equalsBtnPressed() {
     value1 = 0;
     newLine = true;
 }
+
 // Try it out -> Button
 document.getElementById('tryItBtn').addEventListener('click', function() {
     // Flip back to welcome text
